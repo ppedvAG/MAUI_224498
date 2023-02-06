@@ -9,7 +9,7 @@ public partial class App : Application
 		InitializeComponent();
 
         //MainPage beinhaltet die jeweils angezeigte Seite. Zuweisungen hier definieren die Startpage der App.
-        MainPage = new Xaml_Grundlagen();
+        MainPage = new Controls();
 	}
 
 
