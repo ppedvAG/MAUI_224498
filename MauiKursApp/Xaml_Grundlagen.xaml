@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"    
+             xmlns:local="clr-namespace:MauiKursApp"
+             x:Class="MauiKursApp.Xaml_Grundlagen"
+             Title="Xaml_Grundlagen">
+    <ContentPage.Content>
+        <StackLayout>
+            <Button x:Name="Btn_KlickMich"
+                    Text="Klick mich"
+                    FontSize="Small"
+                    HorizontalOptions="End" 
+                    Margin="10"
+                    TextColor="Fuchsia"
+                    Clicked="Btn_KlickMich_Clicked"
+                    WidthRequest="500"/>
+
+            <Label VerticalOptions="FillAndExpand" BackgroundColor="Red"
+                   VerticalTextAlignment="Center">
+                <Label.Text>
+                    Hallo, ich bin ein String
+                </Label.Text>
+                <Label.TextColor>
+                    <Color>#B2B3C6</Color>
+                </Label.TextColor>
+            </Label>
+
+            <Label VerticalOptions="End" BackgroundColor="Yellow">Ich bin auch ein String</Label>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
