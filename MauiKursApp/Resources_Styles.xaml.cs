@@ -7,8 +7,9 @@ public partial class Resources_Styles : ContentPage
 		InitializeComponent();
 	}
 
-    private void Button_Clicked(object sender, EventArgs e)
+    private void Btn_ChangeColor_Clicked(object sender, EventArgs e)
     {
-		this.Resources["Primary"] = Colors.LightGreen;
+        //Codeseitiger Zugriff auf Ressource
+        this.Resources["Primary"] = Colors.Red;
     }
 }
