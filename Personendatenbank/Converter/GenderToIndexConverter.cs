@@ -5,18 +5,18 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MauiKursApp.Bindings
+namespace Personendatenbank.Converter
 {
-    internal class DoubleToColorConverter : IValueConverter
+    internal class GenderToIndexConverter : IValueConverter
     {
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            return new Color((byte)(double)value, System.Convert.ToByte(parameter), (byte)0);
+            return (int)value;
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            return Enum.GetValues(parameter as Type).GetValue((int)value);
         }
     }
 }

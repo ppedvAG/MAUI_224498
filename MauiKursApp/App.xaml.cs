@@ -9,7 +9,11 @@ public partial class App : Application
 		InitializeComponent();
 
         //MainPage beinhaltet die jeweils angezeigte Seite. Zuweisungen hier definieren die Startpage der App.
-        MainPage = new Bindings.Bindings();
+        //MainPage = new Bindings.Bindings();
+
+        //MainPage = new NavigationPage(new Navi.NavPageBsp());
+
+        MainPage = new Navi.TabbedPageBsp();
 	}
 
 
