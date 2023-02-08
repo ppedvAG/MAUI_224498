@@ -101,7 +101,7 @@
 	  <MauiXaml Update="M08_Navi\TabbedPageBsp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Plattformspezifika\Plattformspezifika.xaml">
+	  <MauiXaml Update="M09_Plattformspezifika\Plattformspezifika.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
