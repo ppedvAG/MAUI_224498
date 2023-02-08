@@ -65,7 +65,7 @@
 	  <Compile Update="M06_Resources_Styles.xaml.cs">
 	    <DependentUpon>M06_Resources_Styles.xaml</DependentUpon>
 	  </Compile>
-	  <Compile Update="Navi\NavPageBsp.xaml.cs">
+	  <Compile Update="M08_Navi\NavPageBsp.xaml.cs">
 	    <DependentUpon>%(Filename)</DependentUpon>
 	  </Compile>
 	</ItemGroup>
@@ -86,19 +86,22 @@
 	  <MauiXaml Update="M06_Resources_Styles.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Navi\AppShell.xaml">
+	  <MauiXaml Update="M08_Navi\AppShell.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Navi\NavPageBsp.xaml">
+	  <MauiXaml Update="M08_Navi\NavPageBsp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Navi\RoutingBsp.xaml">
+	  <MauiXaml Update="M08_Navi\RoutingBsp.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Navi\RoutingTarget.xaml">
+	  <MauiXaml Update="M08_Navi\RoutingTarget.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
-	  <MauiXaml Update="Navi\TabbedPageBsp.xaml">
+	  <MauiXaml Update="M08_Navi\TabbedPageBsp.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Plattformspezifika\Plattformspezifika.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

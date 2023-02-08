@@ -6,6 +6,7 @@ public partial class AppShell : Shell
 	{
 		InitializeComponent();
 
-		Routing.RegisterRoute("navi/routeTarget", typeof(Navi.RoutingTarget));
+        //Manuelle Routen-Registrierung
+        Routing.RegisterRoute("navi/routeTarget", typeof(Navi.RoutingTarget));
 	}
 }

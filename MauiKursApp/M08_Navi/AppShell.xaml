@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:local="clr-namespace:MauiKursApp"
+       xmlns:navi="clr-namespace:MauiKursApp.Navi"
+       xmlns:bindings="clr-namespace:MauiKursApp.Bindings"
+       xmlns:flyout="clr-namespace:MauiKursApp.Navi.FlyoutBsp"
+       xmlns:spez="clr-namespace:MauiKursApp.Plattformspezifika"
+       x:Class="MauiKursApp.Navi.AppShell"
+       Title="AppShell">
+    <!--Die Shell bietet eine Routing-Navigation für alle angemeldeten Seiten (vgl. RoutingBsp.xaml)-->
+    <!--FlyoutItems generieren ein Flyout-Menü, Tab und TabBar generieren eine Register-Navigation-->
+
+    <FlyoutItem Title="M03_Grundlagen">
+        <ShellContent Route="grundlagen"
+                      ContentTemplate="{DataTemplate local:Xaml_Grundlagen}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="M04_Controls">
+        <ShellContent Route="control"
+                      ContentTemplate="{DataTemplate local:Controls}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="M05_Layouts">
+        <ShellContent Route="layouts"
+                      ContentTemplate="{DataTemplate local:Layouts}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="M06_ResourcesAndStyles">
+        <ShellContent Route="resources"
+                      ContentTemplate="{DataTemplate local:Resources_Styles}"/>
+    </FlyoutItem>
+    <FlyoutItem Title="M07_Bindings">
+        <ShellContent Route="bindings">
+            <bindings:Bindings/>
+        </ShellContent>
+    </FlyoutItem>
+    <FlyoutItem Title="M08_Navigation"
+                Route="navi">
+        <ShellContent Title="Routing" 
+                      Route="route"
+                      ContentTemplate="{DataTemplate navi:RoutingBsp}"/>
+        <!--Shell ist momentan nicht kompatibel mit den anderen (unten stehenden) Navigationsarten -> generiert Exception-->
+        <ShellContent Title="NavigationPage"
+                      Route="navigationpage"
+                      ContentTemplate="{DataTemplate navi:NavPageBsp}"/>
+        <ShellContent Title="TabbedPage"
+                      Route="tabbedpage"
+                      ContentTemplate="{DataTemplate navi:TabbedPageBsp}"/>
+        <ShellContent Title="FlyoutPage"
+                      Route="flyoutpage"
+                      ContentTemplate="{DataTemplate flyout:FlyoutPage1}"/>
+    </FlyoutItem>
+    
+    <FlyoutItem Title="M09_Plattformspezifika">
+        <ShellContent Route="spezifika"
+                      Title="Plattformspezifika"
+                      ContentTemplate="{DataTemplate spez:Plattformspezifika}"/>
+    </FlyoutItem>
+    
+    <MenuItem Text="Hilfe"/>
+
+</Shell>

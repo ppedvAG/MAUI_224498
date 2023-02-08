@@ -20,5 +20,10 @@ namespace Personendatenbank.Model
 
             Gender = Gender.Weiblich;
         }
+
+        public override string ToString()
+        {
+            return $"{Name} ({Gender})\nGeboren am {Birthdate}\nVerheiratet: {IsMarried}";
+        }
     }
 }
