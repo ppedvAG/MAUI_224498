@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:vm="clr-namespace:MauiKursApp.MVVM.ViewModel"
+             x:Class="MauiKursApp.MVVM.View.BeispielView"
+             Title="BeispielView">
+    <ContentPage.BindingContext>
+        <vm:BeispielViewModel/>
+    </ContentPage.BindingContext>
+    
+    <StackLayout>
+        <Entry Text="{Binding NeuerHersteller}" Placeholder="Hersteller"/>
+        <Entry Text="{Binding NeueMaxGeschwindigkeit}" Placeholder="Maximale Geschwindigkeit"/>
+        <DatePicker Date="{Binding NeuesHerstellungsdatum}"/>
+        <Button Text="Hinzufügen"
+                Command="{Binding HinzufügenCmd}"/>
+
+        <ListView x:Name="LstV_PKW"
+                  ItemsSource="{Binding PKWListe}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout>
+                            <Label Text="{Binding Hersteller}"/>
+                            <Label Text="{Binding MaxGeschwindigkeit}"/>
+                            <DatePicker Date="{Binding Herstellungsdatum}"/>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Löschen"
+                Command="{Binding LöschenCmd}"
+                CommandParameter="{Binding Source={x:Reference LstV_PKW}}"/>
+    </StackLayout>
+</ContentPage>
