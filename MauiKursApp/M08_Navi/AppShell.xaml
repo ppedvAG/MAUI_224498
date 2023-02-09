@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
+<!--vgl. CodeBehind, RoutingBsp.xaml, RouteTargetPage.xaml, App.xaml.cs-->
 <Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
        xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
        xmlns:local="clr-namespace:MauiKursApp"
@@ -51,17 +52,17 @@
     </FlyoutItem>
     
     <FlyoutItem Title="M09_Plattformspezifika">
-        <ShellContent Route="spezifika"
-                      Title="Plattformspezifika"
-                      ContentTemplate="{DataTemplate spez:Plattformspezifika}"/>
+        <ShellContent Route="plattform"
+                      ContentTemplate="{DataTemplate osspez:Plattformspezifika}"/>
     </FlyoutItem>
-    
     <FlyoutItem Title="M10_MVVM">
         <ShellContent Route="mvvm"
-                      Title="MVVM"
                       ContentTemplate="{DataTemplate mvvm:BeispielView}"/>
     </FlyoutItem>
-    
-    <MenuItem Text="Hilfe"/>
+    <FlyoutItem Title="M11_Gestures">
+        <ShellContent Route="gestures"
+                      ContentTemplate="{DataTemplate local:Gestures}"/>
+    </FlyoutItem>
 
+    <MenuItem Text="Hilfe"/>
 </Shell>

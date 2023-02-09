@@ -7,5 +7,8 @@
     <VerticalStackLayout>
         <Button Text="Xaml-Grundlagen" x:Name="Btn_Grundlagen" Clicked="Btn_Grundlagen_Clicked"/>
         <Button Text="Controls" x:Name="Btn_Controls" Clicked="Btn_Controls_Clicked"/>
+        
+        <!--M11: Bsp für MessageCenter-Verwendung, vgl. CodeBehind und M11_McSubscriberPage.xaml-->
+        <Button Text="Start Message" Clicked="Button_Clicked"/>
     </VerticalStackLayout>
 </ContentPage>
